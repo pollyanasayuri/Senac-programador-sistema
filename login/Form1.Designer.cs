@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             buttonEntrar = new Button();
             label1 = new Label();
             label2 = new Label();
             textBoxUsuario = new TextBox();
             textBoxSenha = new TextBox();
             labelResultado = new Label();
+            label3 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // buttonEntrar
@@ -87,22 +91,44 @@
             labelResultado.Size = new Size(0, 15);
             labelResultado.TabIndex = 7;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(135, 345);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 8;
+            label3.Text = "label3";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-4, -4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(651, 389);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(800, 624);
+            ClientSize = new Size(800, 381);
+            Controls.Add(label3);
             Controls.Add(labelResultado);
             Controls.Add(textBoxSenha);
             Controls.Add(textBoxUsuario);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(buttonEntrar);
+            Controls.Add(pictureBox1);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
-            Text = "Form1";
+            Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -114,5 +140,7 @@
         private TextBox textBoxUsuario;
         private TextBox textBoxSenha;
         private Label labelResultado;
+        private Label label3;
+        private PictureBox pictureBox1;
     }
 }

@@ -12,13 +12,13 @@ namespace login
             string usuario = textBoxUsuario.Text;
             string senha = textBoxSenha.Text;
 
-            if (usuario == null || senha ==  "")
+            if (usuario == null || senha == "")
             {
                 labelResultado.Text = "Usuario é Obrigatorio !!";
                 labelResultado.ForeColor = Color.Red;
             }
 
-            else if  (usuario == "Rafael.sousa" && senha == "12345")
+            else if (usuario == "Rafael.sousa" && senha == "12345")
             {
                 labelResultado.Text = "Autenticado com sucesso!";
             }
@@ -27,5 +27,7 @@ namespace login
                 labelResultado.Text = "Usuario ou senha incorreto...";
             }
         }
+
+        
     }
 }
