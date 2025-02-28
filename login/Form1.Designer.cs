@@ -35,7 +35,6 @@
             textBoxUsuario = new TextBox();
             textBoxSenha = new TextBox();
             labelResultado = new Label();
-            label3 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -91,21 +90,12 @@
             labelResultado.Size = new Size(0, 15);
             labelResultado.TabIndex = 7;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(135, 345);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 8;
-            label3.Text = "label3";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(-4, -4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(651, 389);
+            pictureBox1.Size = new Size(805, 391);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
@@ -116,7 +106,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(800, 381);
-            Controls.Add(label3);
             Controls.Add(labelResultado);
             Controls.Add(textBoxSenha);
             Controls.Add(textBoxUsuario);
@@ -140,7 +129,6 @@
         private TextBox textBoxUsuario;
         private TextBox textBoxSenha;
         private Label labelResultado;
-        private Label label3;
         private PictureBox pictureBox1;
     }
 }

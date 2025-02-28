@@ -6,26 +6,46 @@ namespace login
         {
             InitializeComponent();
         }
-
-        private void buttonEntrar_Click(object sender, EventArgs e)
+        List<string> listaUsuarios = new List<string>() { "neymar.jr", "pablo.vitar", "sukuna.silva" };
+       private void buttonEntrar_Click(object sender, EventArgs e)
         {
-            string usuario = textBoxUsuario.Text;
+            string usuarioBuscado = textBoxUsuario.Text;
             string senha = textBoxSenha.Text;
+            
 
-            if (usuario == null || senha == "")
+            if (string.IsNullOrWhiteSpace(usuarioBuscado))
             {
                 labelResultado.Text = "Usuario é Obrigatorio !!";
                 labelResultado.ForeColor = Color.Red;
+                return;
             }
-
-            else if (usuario == "Rafael.sousa" && senha == "12345")
+              
+            if (senha == null || senha == "")
+            {
+                labelResultado.Text = "Usuario é Obrigatorio !!";
+                labelResultado.ForeColor = Color.Red;
+                return;
+            }
+            
+            int posicaoUsuarioEncontrado = -1;
+            for (int i = 0; i < listaUsuarios.Count; i++)
+            {
+                if (usuarioBuscado == listaUsuarios[i])
+                {
+                    posicaoUsuarioEncontrado = i;
+                }
+            }
+            if (posicaoUsuarioEncontrado > -1 && senha == "12345")
             {
                 labelResultado.Text = "Autenticado com sucesso!";
+                labelResultado.ForeColor = Color.Green;
             }
             else
             {
                 labelResultado.Text = "Usuario ou senha incorreto...";
+                labelResultado.ForeColor = Color.Red;
             }
+            
         }
 
         
