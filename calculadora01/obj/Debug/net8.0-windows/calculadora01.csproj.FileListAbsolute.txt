@@ -1,0 +1,17 @@
+C:\Users\pollyana.smbrito\source\repos\calculadora01\bin\Debug\net8.0-windows\calculadora01.exe
+C:\Users\pollyana.smbrito\source\repos\calculadora01\bin\Debug\net8.0-windows\calculadora01.deps.json
+C:\Users\pollyana.smbrito\source\repos\calculadora01\bin\Debug\net8.0-windows\calculadora01.runtimeconfig.json
+C:\Users\pollyana.smbrito\source\repos\calculadora01\bin\Debug\net8.0-windows\calculadora01.dll
+C:\Users\pollyana.smbrito\source\repos\calculadora01\bin\Debug\net8.0-windows\calculadora01.pdb
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.Form1.resources
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.csproj.GenerateResource.cache
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.AssemblyInfoInputs.cache
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.AssemblyInfo.cs
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.csproj.CoreCompileInputs.cache
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.dll
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\refint\calculadora01.dll
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.pdb
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.genruntimeconfig.cache
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\ref\calculadora01.dll
+C:\Users\pollyana.smbrito\source\repos\calculadora01\obj\Debug\net8.0-windows\calculadora01.Form2.resources
