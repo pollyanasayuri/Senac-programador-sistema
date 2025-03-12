@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\calculadora01\\calculadora01.csproj": {}
+    "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\Calculadora2\\Calculadora2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\calculadora01\\calculadora01.csproj": {
+    "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\Calculadora2\\Calculadora2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\calculadora01\\calculadora01.csproj",
-        "projectName": "calculadora01",
-        "projectPath": "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\calculadora01\\calculadora01.csproj",
+        "projectUniqueName": "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\Calculadora2\\Calculadora2.csproj",
+        "projectName": "Calculadora2",
+        "projectPath": "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\Calculadora2\\Calculadora2.csproj",
         "packagesPath": "C:\\Users\\pollyana.smbrito\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\calculadora01\\obj\\",
+        "outputPath": "C:\\Users\\pollyana.smbrito\\source\\repos\\Senac-programador-sistema\\Calculadora2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
