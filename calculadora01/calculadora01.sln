@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "calculadora01", "calculadora01.csproj", "{912F9A68-8EBC-4220-92A0-99A637884F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora2", "..\Calculadora2\Calculadora2.csproj", "{79362624-2165-4235-94BD-FD5F8E91218E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculadora2", "..\Calculadora2\Calculadora2.csproj", "{79362624-2165-4235-94BD-FD5F8E91218E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cadastro_clientes", "..\cadastro_clientes\cadastro_clientes.csproj", "{CA3753FB-5043-4D15-A071-4EF31213EE26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{79362624-2165-4235-94BD-FD5F8E91218E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79362624-2165-4235-94BD-FD5F8E91218E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79362624-2165-4235-94BD-FD5F8E91218E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3753FB-5043-4D15-A071-4EF31213EE26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3753FB-5043-4D15-A071-4EF31213EE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3753FB-5043-4D15-A071-4EF31213EE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3753FB-5043-4D15-A071-4EF31213EE26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

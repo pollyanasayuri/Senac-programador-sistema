@@ -17,9 +17,9 @@ namespace Calculadora2
         private void buttonCalcular_Click(object sender, EventArgs e)
         {
             string valor1 = textBoxValor1.Text;
-            string valor2 = textBoxValor2.Text; 
+            string valor2 = textBoxValor2.Text;
 
-            if(!double.TryParse(valor1, out double doubleValor1) || !double.TryParse(valor2, out double doubleValor2))
+            if (!double.TryParse(valor1, out double doubleValor1) || !double.TryParse(valor2, out double doubleValor2))
             {
                 textBoxResultado.Text = "Os valores digitados devem ser números validos";
                 return;
@@ -61,6 +61,13 @@ namespace Calculadora2
             }
             textBoxResultado.Text = resultado.ToString();
 
+        }
+
+        private void buttonMigrar_Click(object sender, EventArgs e)
+        {
+            FormsNovo proximo = new FormsNovo();
+            proximo.Show();
+            this.Hide();
         }
     }
 }

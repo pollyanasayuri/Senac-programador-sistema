@@ -15,3 +15,4 @@ C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\Calculadora2\ob
 C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\Calculadora2\obj\Debug\net8.0-windows\Calculadora2.pdb
 C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\Calculadora2\obj\Debug\net8.0-windows\Calculadora2.genruntimeconfig.cache
 C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\Calculadora2\obj\Debug\net8.0-windows\ref\Calculadora2.dll
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\Calculadora2\obj\Debug\net8.0-windows\Calculadora2.FormsNovo.resources

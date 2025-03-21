@@ -1,0 +1,17 @@
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\bin\Debug\net8.0-windows\cadastro_clientes.exe
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\bin\Debug\net8.0-windows\cadastro_clientes.deps.json
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\bin\Debug\net8.0-windows\cadastro_clientes.runtimeconfig.json
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\bin\Debug\net8.0-windows\cadastro_clientes.dll
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\bin\Debug\net8.0-windows\cadastro_clientes.pdb
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.CriarCliente.resources
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.csproj.GenerateResource.cache
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.AssemblyInfoInputs.cache
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.AssemblyInfo.cs
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.csproj.CoreCompileInputs.cache
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.sourcelink.json
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.dll
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\refint\cadastro_clientes.dll
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.pdb
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\cadastro_clientes.genruntimeconfig.cache
+C:\Users\pollyana.smbrito\source\repos\Senac-programador-sistema\cadastro_clientes\obj\Debug\net8.0-windows\ref\cadastro_clientes.dll

@@ -35,6 +35,7 @@
             labelOperador = new Label();
             buttonCalcular = new Button();
             labelIgual = new Label();
+            buttonMigrar = new Button();
             SuspendLayout();
             // 
             // comboBox
@@ -94,11 +95,22 @@
             labelIgual.TabIndex = 6;
             labelIgual.Text = "=";
             // 
+            // buttonMigrar
+            // 
+            buttonMigrar.Location = new Point(555, 288);
+            buttonMigrar.Name = "buttonMigrar";
+            buttonMigrar.Size = new Size(114, 71);
+            buttonMigrar.TabIndex = 7;
+            buttonMigrar.Text = "Proximo";
+            buttonMigrar.UseVisualStyleBackColor = true;
+            buttonMigrar.Click += buttonMigrar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonMigrar);
             Controls.Add(labelIgual);
             Controls.Add(buttonCalcular);
             Controls.Add(labelOperador);
@@ -121,5 +133,6 @@
         private Label labelOperador;
         private Button buttonCalcular;
         private Label labelIgual;
+        private Button buttonMigrar;
     }
 }
