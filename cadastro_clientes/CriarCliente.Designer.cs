@@ -35,13 +35,13 @@
             label4 = new Label();
             labelEtnia = new Label();
             labelLogradouro = new Label();
-            textBoxName = new TextBox();
+            textBoxNomeCliente = new TextBox();
             textBoxNomeSocial = new TextBox();
             textBoxEmail = new TextBox();
             textBoxBairro = new TextBox();
             textBoxLogradouro = new TextBox();
             comboBoxGenero = new ComboBox();
-            comboBoxEtnia = new ComboBox();
+            comboBoxEtniaCliente = new ComboBox();
             labelBairro = new Label();
             labelMunicipio = new Label();
             labelCEP = new Label();
@@ -62,22 +62,24 @@
             checkBoxNao = new CheckBox();
             dataGridView1 = new DataGridView();
             buttonMostrarClientes = new Button();
+            labelRetorno = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // buttonCadastrar
             // 
-            buttonCadastrar.Location = new Point(106, 208);
+            buttonCadastrar.Location = new Point(319, 285);
             buttonCadastrar.Name = "buttonCadastrar";
             buttonCadastrar.Size = new Size(75, 23);
             buttonCadastrar.TabIndex = 0;
             buttonCadastrar.Text = "Cadastrar";
             buttonCadastrar.UseVisualStyleBackColor = true;
+            buttonCadastrar.Click += buttonCadastrar_Click;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
-            labelNome.Location = new Point(12, 9);
+            labelNome.Location = new Point(5, 9);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(40, 15);
             labelNome.TabIndex = 1;
@@ -86,7 +88,7 @@
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(12, 49);
+            labelEmail.Location = new Point(5, 46);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(36, 15);
             labelEmail.TabIndex = 2;
@@ -95,7 +97,7 @@
             // labelNomeSocial
             // 
             labelNomeSocial.AutoSize = true;
-            labelNomeSocial.Location = new Point(12, 86);
+            labelNomeSocial.Location = new Point(5, 83);
             labelNomeSocial.Name = "labelNomeSocial";
             labelNomeSocial.Size = new Size(74, 15);
             labelNomeSocial.TabIndex = 3;
@@ -104,7 +106,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 111);
+            label4.Location = new Point(5, 111);
             label4.Name = "label4";
             label4.Size = new Size(45, 15);
             label4.TabIndex = 4;
@@ -113,7 +115,7 @@
             // labelEtnia
             // 
             labelEtnia.AutoSize = true;
-            labelEtnia.Location = new Point(12, 143);
+            labelEtnia.Location = new Point(5, 143);
             labelEtnia.Name = "labelEtnia";
             labelEtnia.Size = new Size(33, 15);
             labelEtnia.TabIndex = 5;
@@ -122,45 +124,45 @@
             // labelLogradouro
             // 
             labelLogradouro.AutoSize = true;
-            labelLogradouro.Location = new Point(326, 15);
+            labelLogradouro.Location = new Point(295, 9);
             labelLogradouro.Name = "labelLogradouro";
             labelLogradouro.Size = new Size(69, 15);
             labelLogradouro.TabIndex = 6;
             labelLogradouro.Text = "Logradouro";
             // 
-            // textBoxName
+            // textBoxNomeCliente
             // 
-            textBoxName.Location = new Point(56, 6);
-            textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(205, 23);
-            textBoxName.TabIndex = 7;
+            textBoxNomeCliente.Location = new Point(56, 6);
+            textBoxNomeCliente.Name = "textBoxNomeCliente";
+            textBoxNomeCliente.Size = new Size(205, 23);
+            textBoxNomeCliente.TabIndex = 7;
             // 
             // textBoxNomeSocial
             // 
-            textBoxNomeSocial.Location = new Point(92, 78);
+            textBoxNomeSocial.Location = new Point(81, 78);
             textBoxNomeSocial.Name = "textBoxNomeSocial";
-            textBoxNomeSocial.Size = new Size(205, 23);
+            textBoxNomeSocial.Size = new Size(180, 23);
             textBoxNomeSocial.TabIndex = 8;
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(56, 46);
+            textBoxEmail.Location = new Point(56, 43);
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(205, 23);
             textBoxEmail.TabIndex = 9;
             // 
             // textBoxBairro
             // 
-            textBoxBairro.Location = new Point(382, 49);
+            textBoxBairro.Location = new Point(339, 69);
             textBoxBairro.Name = "textBoxBairro";
-            textBoxBairro.Size = new Size(167, 23);
+            textBoxBairro.Size = new Size(128, 23);
             textBoxBairro.TabIndex = 10;
             // 
             // textBoxLogradouro
             // 
-            textBoxLogradouro.Location = new Point(401, 11);
+            textBoxLogradouro.Location = new Point(370, 6);
             textBoxLogradouro.Name = "textBoxLogradouro";
-            textBoxLogradouro.Size = new Size(167, 23);
+            textBoxLogradouro.Size = new Size(97, 23);
             textBoxLogradouro.TabIndex = 11;
             // 
             // comboBoxGenero
@@ -171,18 +173,18 @@
             comboBoxGenero.Size = new Size(205, 23);
             comboBoxGenero.TabIndex = 12;
             // 
-            // comboBoxEtnia
+            // comboBoxEtniaCliente
             // 
-            comboBoxEtnia.FormattingEnabled = true;
-            comboBoxEtnia.Location = new Point(56, 140);
-            comboBoxEtnia.Name = "comboBoxEtnia";
-            comboBoxEtnia.Size = new Size(205, 23);
-            comboBoxEtnia.TabIndex = 13;
+            comboBoxEtniaCliente.FormattingEnabled = true;
+            comboBoxEtniaCliente.Location = new Point(56, 140);
+            comboBoxEtniaCliente.Name = "comboBoxEtniaCliente";
+            comboBoxEtniaCliente.Size = new Size(205, 23);
+            comboBoxEtniaCliente.TabIndex = 13;
             // 
             // labelBairro
             // 
             labelBairro.AutoSize = true;
-            labelBairro.Location = new Point(326, 57);
+            labelBairro.Location = new Point(295, 78);
             labelBairro.Name = "labelBairro";
             labelBairro.Size = new Size(38, 15);
             labelBairro.TabIndex = 14;
@@ -191,7 +193,7 @@
             // labelMunicipio
             // 
             labelMunicipio.AutoSize = true;
-            labelMunicipio.Location = new Point(326, 86);
+            labelMunicipio.Location = new Point(295, 138);
             labelMunicipio.Name = "labelMunicipio";
             labelMunicipio.Size = new Size(61, 15);
             labelMunicipio.TabIndex = 15;
@@ -200,7 +202,7 @@
             // labelCEP
             // 
             labelCEP.AutoSize = true;
-            labelCEP.Location = new Point(326, 116);
+            labelCEP.Location = new Point(305, 210);
             labelCEP.Name = "labelCEP";
             labelCEP.Size = new Size(28, 15);
             labelCEP.TabIndex = 16;
@@ -209,7 +211,7 @@
             // labelDataDeNascimento
             // 
             labelDataDeNascimento.AutoSize = true;
-            labelDataDeNascimento.Location = new Point(326, 148);
+            labelDataDeNascimento.Location = new Point(5, 180);
             labelDataDeNascimento.Name = "labelDataDeNascimento";
             labelDataDeNascimento.Size = new Size(117, 15);
             labelDataDeNascimento.TabIndex = 17;
@@ -218,7 +220,7 @@
             // labelTelefone
             // 
             labelTelefone.AutoSize = true;
-            labelTelefone.Location = new Point(326, 177);
+            labelTelefone.Location = new Point(5, 210);
             labelTelefone.Name = "labelTelefone";
             labelTelefone.Size = new Size(51, 15);
             labelTelefone.TabIndex = 18;
@@ -227,7 +229,7 @@
             // labelNumero
             // 
             labelNumero.AutoSize = true;
-            labelNumero.Location = new Point(600, 78);
+            labelNumero.Location = new Point(295, 43);
             labelNumero.Name = "labelNumero";
             labelNumero.Size = new Size(51, 15);
             labelNumero.TabIndex = 19;
@@ -236,7 +238,7 @@
             // labelComplemento
             // 
             labelComplemento.AutoSize = true;
-            labelComplemento.Location = new Point(593, 14);
+            labelComplemento.Location = new Point(295, 108);
             labelComplemento.Name = "labelComplemento";
             labelComplemento.Size = new Size(84, 15);
             labelComplemento.TabIndex = 20;
@@ -245,7 +247,7 @@
             // labelEstado
             // 
             labelEstado.AutoSize = true;
-            labelEstado.Location = new Point(600, 46);
+            labelEstado.Location = new Point(295, 168);
             labelEstado.Name = "labelEstado";
             labelEstado.Size = new Size(42, 15);
             labelEstado.TabIndex = 21;
@@ -254,7 +256,7 @@
             // labelEstrangeiro
             // 
             labelEstrangeiro.AutoSize = true;
-            labelEstrangeiro.Location = new Point(448, 247);
+            labelEstrangeiro.Location = new Point(13, 260);
             labelEstrangeiro.Name = "labelEstrangeiro";
             labelEstrangeiro.Size = new Size(83, 15);
             labelEstrangeiro.TabIndex = 22;
@@ -262,61 +264,61 @@
             // 
             // textBoxNumero
             // 
-            textBoxNumero.Location = new Point(657, 75);
+            textBoxNumero.Location = new Point(352, 40);
             textBoxNumero.Name = "textBoxNumero";
-            textBoxNumero.Size = new Size(100, 23);
+            textBoxNumero.Size = new Size(115, 23);
             textBoxNumero.TabIndex = 25;
             // 
             // textBoxEstado
             // 
-            textBoxEstado.Location = new Point(648, 46);
+            textBoxEstado.Location = new Point(339, 165);
             textBoxEstado.Name = "textBoxEstado";
-            textBoxEstado.Size = new Size(100, 23);
+            textBoxEstado.Size = new Size(128, 23);
             textBoxEstado.TabIndex = 26;
             // 
             // textBoxComplemento
             // 
-            textBoxComplemento.Location = new Point(683, 12);
+            textBoxComplemento.Location = new Point(385, 100);
             textBoxComplemento.Name = "textBoxComplemento";
-            textBoxComplemento.Size = new Size(100, 23);
+            textBoxComplemento.Size = new Size(82, 23);
             textBoxComplemento.TabIndex = 27;
             // 
             // textBoxMunicipio
             // 
-            textBoxMunicipio.Location = new Point(393, 86);
+            textBoxMunicipio.Location = new Point(362, 135);
             textBoxMunicipio.Name = "textBoxMunicipio";
-            textBoxMunicipio.Size = new Size(151, 23);
+            textBoxMunicipio.Size = new Size(105, 23);
             textBoxMunicipio.TabIndex = 28;
             // 
             // maskedTextBoxDatadeNascimento
             // 
-            maskedTextBoxDatadeNascimento.Location = new Point(444, 148);
+            maskedTextBoxDatadeNascimento.Location = new Point(119, 177);
             maskedTextBoxDatadeNascimento.Mask = "00/00/0000";
             maskedTextBoxDatadeNascimento.Name = "maskedTextBoxDatadeNascimento";
-            maskedTextBoxDatadeNascimento.Size = new Size(100, 23);
+            maskedTextBoxDatadeNascimento.Size = new Size(73, 23);
             maskedTextBoxDatadeNascimento.TabIndex = 29;
             maskedTextBoxDatadeNascimento.ValidatingType = typeof(DateTime);
             // 
             // maskedTextBoxCEP
             // 
-            maskedTextBoxCEP.Location = new Point(360, 113);
+            maskedTextBoxCEP.Location = new Point(339, 202);
             maskedTextBoxCEP.Mask = "00000-000";
             maskedTextBoxCEP.Name = "maskedTextBoxCEP";
-            maskedTextBoxCEP.Size = new Size(100, 23);
+            maskedTextBoxCEP.Size = new Size(67, 23);
             maskedTextBoxCEP.TabIndex = 30;
             // 
             // maskedTextBoxTelefone
             // 
-            maskedTextBoxTelefone.Location = new Point(382, 177);
+            maskedTextBoxTelefone.Location = new Point(62, 210);
             maskedTextBoxTelefone.Mask = "(00) 00000-0000";
             maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
-            maskedTextBoxTelefone.Size = new Size(100, 23);
+            maskedTextBoxTelefone.Size = new Size(94, 23);
             maskedTextBoxTelefone.TabIndex = 31;
             // 
             // checkBoxSim
             // 
             checkBoxSim.AutoSize = true;
-            checkBoxSim.Location = new Point(454, 273);
+            checkBoxSim.Location = new Point(10, 289);
             checkBoxSim.Name = "checkBoxSim";
             checkBoxSim.Size = new Size(46, 19);
             checkBoxSim.TabIndex = 32;
@@ -326,7 +328,7 @@
             // checkBoxNao
             // 
             checkBoxNao.AutoSize = true;
-            checkBoxNao.Location = new Point(506, 273);
+            checkBoxNao.Location = new Point(74, 289);
             checkBoxNao.Name = "checkBoxNao";
             checkBoxNao.Size = new Size(48, 19);
             checkBoxNao.TabIndex = 33;
@@ -340,14 +342,14 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(57, 258);
+            dataGridView1.Location = new Point(408, 298);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.Size = new Size(389, 150);
             dataGridView1.TabIndex = 34;
             // 
             // buttonMostrarClientes
             // 
-            buttonMostrarClientes.Location = new Point(106, 415);
+            buttonMostrarClientes.Location = new Point(550, 269);
             buttonMostrarClientes.Name = "buttonMostrarClientes";
             buttonMostrarClientes.Size = new Size(123, 23);
             buttonMostrarClientes.TabIndex = 35;
@@ -355,11 +357,21 @@
             buttonMostrarClientes.UseVisualStyleBackColor = true;
             buttonMostrarClientes.Click += buttonMostrarClientes_Click;
             // 
+            // labelRetorno
+            // 
+            labelRetorno.AutoSize = true;
+            labelRetorno.Location = new Point(64, 359);
+            labelRetorno.Name = "labelRetorno";
+            labelRetorno.Size = new Size(32, 15);
+            labelRetorno.TabIndex = 36;
+            labelRetorno.Text = "error";
+            // 
             // CriarCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelRetorno);
             Controls.Add(buttonMostrarClientes);
             Controls.Add(dataGridView1);
             Controls.Add(checkBoxNao);
@@ -380,13 +392,13 @@
             Controls.Add(labelCEP);
             Controls.Add(labelMunicipio);
             Controls.Add(labelBairro);
-            Controls.Add(comboBoxEtnia);
+            Controls.Add(comboBoxEtniaCliente);
             Controls.Add(comboBoxGenero);
             Controls.Add(textBoxLogradouro);
             Controls.Add(textBoxBairro);
             Controls.Add(textBoxEmail);
             Controls.Add(textBoxNomeSocial);
-            Controls.Add(textBoxName);
+            Controls.Add(textBoxNomeCliente);
             Controls.Add(labelLogradouro);
             Controls.Add(labelEtnia);
             Controls.Add(label4);
@@ -410,13 +422,13 @@
         private Label label4;
         private Label labelEtnia;
         private Label labelLogradouro;
-        private TextBox textBoxName;
+        private TextBox textBoxNomeCliente;
         private TextBox textBoxNomeSocial;
         private TextBox textBoxEmail;
         private TextBox textBoxBairro;
         private TextBox textBoxLogradouro;
         private ComboBox comboBoxGenero;
-        private ComboBox comboBoxEtnia;
+        private ComboBox comboBoxEtniaCliente;
         private Label labelBairro;
         private Label labelMunicipio;
         private Label labelCEP;
@@ -437,5 +449,6 @@
         private CheckBox checkBoxNao;
         private DataGridView dataGridView1;
         private Button buttonMostrarClientes;
+        private Label labelRetorno;
     }
 }
