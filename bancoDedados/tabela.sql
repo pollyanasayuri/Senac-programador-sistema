@@ -18,14 +18,16 @@ INSERT INTO produto (
  validade
  )
  values 
- ('1', 'geleia de banho', ' R$ 20,00', '20/03/2026'),
- ('2', 'esfoliante corporal de marshmellow', ' R$ 15,00', '20/03/2026'),
- ('3', 'esfoliante de melancia', ' R$ 15,00', '20/03/2026'),
- ('4', 'perfume para cabelo olympea', ' R$ 30,00', '20/03/2026'),
- ('5', 'perfume para cabelo red', ' R$ 30,00', '20/03/2026'),
- ('6', 'serum facial', ' R$ 10,00', '20/03/2026'),
- ('7', 'sabonete - ', ' R$ 20,00', '20/03/2026'),
- ('8', 'geleia de banho', ' R$ 20,00', '20/03/2026');
+ ('geleia de banho', ' R$ 20,00', '20/03/2026'),
+ ('esfoliante corporal de marshmellow', ' R$ 15,00', '20/03/2026'),
+ ('esfoliante de melancia', ' R$ 15,00', '20/03/2026'),
+ ('perfume para cabelo olympea', ' R$ 30,00', '20/03/2026'),
+ ('perfume para cabelo red', ' R$ 30,00', '20/03/2026'),
+ ('serum facial artesanal', ' R$ 10,00', '20/03/2026'),
+ ('sabonete facial artesanal', ' R$ 8,00', '20/03/2026'),
+ ('limp balm artesanal', ' R$ 20,00', '20/03/2026');
+ 
+ 
 
 
 
