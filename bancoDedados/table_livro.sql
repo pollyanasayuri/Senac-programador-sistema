@@ -1,14 +1,26 @@
+
 CREATE TABLE IF NOT EXISTS livro (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(100) NOT NULL,
     data_publicacao DATETIME NOT NULL,
     numero_paginas INT NULL,
-    preco DECIMAL(10, 2) NULL,
+    preco DECIMAL(10 , 2 ) NULL,
     isbn VARCHAR(17) NOT NULL UNIQUE,
-    genero VARCHAR(30) NOT NULL,
-    editora VARCHAR(50) NOT NULL,
-    autor VARCHAR(100) NOT NULL
-);
+    apagado BIT NOT NULL DEFAULT 0,
+    id_genero INT NOT NULL,
+    id_editora INT NOT NULL,
+    id_autor INT NOT NULL,
+    criado_em DATETIME NOT NULL DEFAULT NOW (),
+    FOREIGN KEY (id_genero)
+        REFERENCES genero (id),
+    FOREIGN KEY (id_editora)
+        REFERENCES editora (id),
+    FOREIGN KEY (id_autor)
+        REFERENCES autor (id)
+);   
+
+
+
 INSERT INTO livro (
  titulo, data_publicacao, preco, numero_paginas, isbn, id_genero, id_editora, id_autor
 ) VALUES 
@@ -54,7 +66,7 @@ NULL,
 ),
 (
 'A lenda do macaco de quinze centímetros e meio',
-'1957-11-09 00:00::00',
+'1957-11-09 00:00:00',
 120.99,
 969,
 '978-0-06-112008-4',
@@ -64,7 +76,7 @@ NULL,
 ),
 (
 '16 toneladas: Adaptação novel',
-'1989-11-09 00:00::00',
+'1989-11-09 00:00:00',
 190.99,
 1000,
 '978-1-4028-9462-6',
@@ -154,7 +166,7 @@ NULL,
 ),
 (
 'As aventuras de π',
-'25.04.1999',
+'1999-04-25',
 500.99,
 1100,
 4,

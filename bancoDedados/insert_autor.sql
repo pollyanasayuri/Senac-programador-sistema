@@ -1,7 +1,6 @@
- SELECT DISTINCT
-    LOWER(autor)
+ SELECT *
 FROM
-    livro; 
+    autor; 
  insert into autor (
  nome, documento
  ) values  
