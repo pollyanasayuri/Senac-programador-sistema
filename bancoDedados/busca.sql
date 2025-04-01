@@ -49,7 +49,13 @@ FROM
     livro
 WHERE
     genero = 'Terror';
+    
+select * from livro 
+where data_publicacao like '199%';
 
+select * from livro order by titulo desc;
+
+select * from livro order by titulo asc; 
 
 
 
