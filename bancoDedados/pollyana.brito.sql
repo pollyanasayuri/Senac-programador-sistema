@@ -1,25 +1,25 @@
 CREATE TABLE IF NOT EXISTS empregado (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(60) NOT NULL,
-    idade VARCHAR(3) NOT NULL,
-    departamento VARCHAR(10) NOT NULL,
-    salario int(30) NOT NULL
+    idade int NOT NULL,
+    departamento VARCHAR(50) NOT NULL,
+    salario int NOT NULL
 );
 
 insert into empregado ( 
 nome, idade, departamento, salario
 ) values 
-('João', '30', 'RH', '50000'),
-('Sarah', '28', 'TI', '60000'),
-('Miguel', '35', 'Vendas', '55000'),
-('Ana', '27','TI' , '62000');
+('João', 30, 'RH', 50000),
+('Sarah', 28, 'TI', 60000),
+('Miguel', 35, 'Vendas', 55000),
+('Ana', 27,'TI' , 62000);
 
 SELECT 
     *
 FROM
     empregado
 WHERE
-    departamento LIKE 'TI';
+    departamento = 'TI';
 
 SELECT 
     nome, salario
@@ -28,24 +28,34 @@ FROM
 WHERE
     salario > 55000;
     
-select * from empregado order by idade desc;
+SELECT 
+    *
+FROM
+    empregado
+ORDER BY idade DESC;
 
 SELECT 
     *
 FROM
-    empregado 
+    empregado
 WHERE
-    idade >= '28'
-        AND idade <= '35';
+    idade BETWEEN 28 AND 35;
         
 	SELECT 
     *
 FROM
     empregado
 WHERE
-    nome LIKE 'M%';
+    nome LIKE 'M%'; /* like é como e procurar algo que comece com M*/
+    
+    select * from empregado where departamento <> 'RH';
 
-select departamento, count(departamento) from empregado group by departamento;
+SELECT 
+    departamento, 
+    COUNT(id)
+FROM
+    empregado
+GROUP BY departamento;
 
 SELECT 
      AVG(salario) from empregado where departamento = 'TI';
@@ -53,31 +63,35 @@ SELECT
 select 		
  sum(salario) from empregado where departamento = 'Vendas';    
 
-CREATE TABLE IF NOT EXISTS departamento (
+CREATE TABLE  departamento (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30) NOT NULL
 );
 
 insert into departamento (
-nome
+departamento.nome
 ) values 
 ('RH'),
 ('TI'),
 ('Vendas');
 
-CREATE TABLE IF NOT EXISTS empregado (
+CREATE TABLE   empregado (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30) NOT NULL,
-    departamento_id varchar(30)
+    idade int not null,
+    id_departamento int not null,
+    salario int not null
 );
 
-insert into(
-nome, departamento
+insert into empregado(
+
+empregado.nome, id.departamento
 ) values
 ('João', '1'),
 ('Sarah', '2'),
 ('Miguel', '3'),
-('Ana', '2');
+('Ana', '2'); 
+
 
 
 

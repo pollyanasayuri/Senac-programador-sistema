@@ -55,7 +55,10 @@ where data_publicacao like '199%';
 
 select * from livro order by titulo desc;
 
-select * from livro order by titulo asc; 
+select * from livro order by titulo asc;
+
+
+ 
 
 
 
