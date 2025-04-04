@@ -14,6 +14,11 @@ nome, idade, departamento, salario
 ('Miguel', 35, 'Vendas', 55000),
 ('Ana', 27,'TI' , 62000);
 
+insert into empregado ( 
+nome, idade, departamento, salario
+) values 
+('Paulo', 59,'vendas' , 75000);
+
 SELECT 
     *
 FROM
@@ -48,7 +53,12 @@ FROM
 WHERE
     nome LIKE 'M%'; /* like é como e procurar algo que comece com M*/
     
-    select * from empregado where departamento <> 'RH';
+  SELECT 
+    *
+FROM
+    empregado
+WHERE
+    departamento <> 'Rh';
 
 SELECT 
     departamento, 
@@ -58,39 +68,65 @@ FROM
 GROUP BY departamento;
 
 SELECT 
-     AVG(salario) from empregado where departamento = 'TI';
+    AVG(salario)
+FROM
+    empregado
+WHERE
+    departamento = 'TI';
      
-select 		
- sum(salario) from empregado where departamento = 'Vendas';    
+SELECT 
+    SUM(salario)
+FROM
+    empregado
+WHERE
+    departamento = 'Vendas';    
 
 CREATE TABLE  departamento (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(30) NOT NULL
+    nome VARCHAR(50) NOT NULL
 );
 
+CREATE TABLE empregado (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    idade INT NOT NULL,
+    id_departamento INT NOT NULL,
+    salario INT NOT NULL,
+    FOREIGN KEY (id_departamento)
+        REFERENCES departamento (id)
+);
 insert into departamento (
-departamento.nome
-) values 
+nome)
+values 
 ('RH'),
 ('TI'),
 ('Vendas');
 
-CREATE TABLE   empregado (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(30) NOT NULL,
-    idade int not null,
-    id_departamento int not null,
-    salario int not null
-);
+insert into departamento (nome)
+values ('compras');
 
-insert into empregado(
+select 
+*
+from
+departamento;
 
-empregado.nome, id.departamento
-) values
-('João', '1'),
-('Sarah', '2'),
-('Miguel', '3'),
-('Ana', '2'); 
+INSERT INTO empregado (nome, idade, salario, id_departamento) VALUES
+('João', 30, 50000, 1),
+('Sarah', 28, 60000, 2),
+('Miguel', 35, 55000, 3),
+('Ana', 27, 62000, 2),
+('Paulo', 59, 75000, 3);
+
+select 
+e.nome as empregado, d.nome as departamento
+from
+empregado e 
+inner join d on e.id_departamento = d.id;
+
+
+
+
+
 
 
 
