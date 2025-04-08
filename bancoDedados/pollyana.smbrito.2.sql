@@ -103,7 +103,8 @@ nome, valor
 from 
 pedido
 inner join cliente on pedido.cliente_id = cliente.id
-where valor > (select avg(valor) from pedido ); 
+where valor > (select avg(valor) from pedido );
+ 
 
 
 
