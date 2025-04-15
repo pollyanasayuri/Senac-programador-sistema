@@ -1,0 +1,101 @@
+﻿using listaatividades.Dominio;
+using MySql.Data.MySqlClient;
+
+namespace listaatividades.Repositorio
+{
+    internal class AtividadeRepositorio
+    {
+        public void Criar(string titulo)
+        {
+            using (var con = DataBase.GetConnection())
+            {
+                con.Open();
+
+                string query = "INSERT INTO atividade (titulo) VALUES(@titulo);";
+
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@titulo", titulo);
+                    cmd.ExecuteNonQuery(); // executar a query 
+                }
+            }
+        }
+
+        public void AtualizarSituacao(int id, int novaSituacao)
+        {
+            using (var con = DataBase.GetConnection())
+            {
+                con.Open();
+
+                // o que vai aqui??
+                string query = "UPDATE atividade SET situacao = @situacao WHERE id = @id;";
+
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@situacao", novaSituacao);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public Atividade BuscarAtividadeEmAndamento()
+        {
+            using (var con = DataBase.GetConnection())
+            {
+                con.Open();
+
+                string query = $"SELECT * FROM atividade WHERE situacao = {Situacao.Realizando};";
+
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Atividade()
+                            {
+                                Id = reader.GetInt32("id"),
+                                Titulo = reader.GetString("titulo"),
+                                Situacao = (Situacao)reader.GetInt32("situacao")
+                            };
+                        }
+                    }
+                }
+
+            }
+            return new Atividade();
+
+        }
+        public List<Atividade> ListarAtividadePendentes()
+        {
+            List<Atividade> atividades = [];
+
+            using (var con = DataBase.GetConnection())
+            {
+                con.Open();
+
+                string query = $"SELECT * FROM atividade WHERE situacao = {Situacao.Pendente};";
+                using (var cmd = new MySqlCommand(query, con))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            atividades.Add(new Atividade()
+                            {
+                                Id = reader.GetInt32("id"),
+                                Titulo = reader.GetString("titulo"),
+                                Situacao = (Situacao)reader.GetInt32("situacao")
+                            });                      
+                        }
+
+                    }
+                }
+                return atividades;
+
+            }
+        }
+
+    }
+
+
+}
