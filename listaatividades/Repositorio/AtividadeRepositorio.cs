@@ -27,7 +27,7 @@ namespace listaatividades.Repositorio
             {
                 con.Open();
 
-                // o que vai aqui??
+
                 string query = "UPDATE atividade SET situacao = @situacao WHERE id = @id;";
 
                 using (var cmd = new MySqlCommand(query, con))
@@ -43,7 +43,7 @@ namespace listaatividades.Repositorio
             {
                 con.Open();
 
-                string query = $"SELECT * FROM atividade WHERE situacao = {Situacao.Realizando};";
+                string query = $"SELECT * FROM atividade WHERE situacao = {(int)Situacao.Realizando};";
 
                 using (var cmd = new MySqlCommand(query, con))
                 {
@@ -65,15 +65,16 @@ namespace listaatividades.Repositorio
             return new Atividade();
 
         }
-        public List<Atividade> ListarAtividadePendentes()
+
+        public List<Atividade> ListarAtividadesPendentes()
         {
             List<Atividade> atividades = [];
-
             using (var con = DataBase.GetConnection())
             {
                 con.Open();
 
-                string query = $"SELECT * FROM atividade WHERE situacao = {Situacao.Pendente};";
+                string query = $"SELECT * FROM atividade WHERE situacao = {(int)Situacao.Pendente};";
+
                 using (var cmd = new MySqlCommand(query, con))
                 {
                     using (var reader = cmd.ExecuteReader())
@@ -85,17 +86,14 @@ namespace listaatividades.Repositorio
                                 Id = reader.GetInt32("id"),
                                 Titulo = reader.GetString("titulo"),
                                 Situacao = (Situacao)reader.GetInt32("situacao")
-                            });                      
-                        }
+                            });
 
+                        }
                     }
                 }
-                return atividades;
-
             }
+            return atividades;
         }
 
     }
-
-
 }
